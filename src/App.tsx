@@ -8,7 +8,7 @@ function App() {
       <h1 style={{ color: '#BDFE02', textAlign: 'center', marginTop: '20px' }}>
         Logistics Flow Visualization
       </h1>
-      <div style={{ overflowX: 'auto', padding: '40px' }}>
+      <div style={{ overflowX: 'visible', padding: '40px' }}>
         <LogisticsDiagram />
       </div>
     </div>

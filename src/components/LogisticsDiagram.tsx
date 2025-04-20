@@ -8,7 +8,7 @@ import warehouse from '../assets/icons/warehouse.svg';
 const LogisticsDiagram: React.FC = () => {
   const nodes = [
     { id: 'customer', label: 'Customer', top: 300, left: 0, icon: factory },
-    { id: 'dc1', label: 'Distribution Center 1', top: 100, left: 210, icon: mall },
+    { id: 'dc1', label: 'Distribution Center 1', top: 100, left: 200, icon: mall },
     { id: 'dc2', label: 'Distribution Center 2', top: 500, left: 200, icon: mall },
     { id: 'warehouse', label: 'Warehouse', top: 300, left: 480, icon: mall },
     { id: 'receiving1', label: 'Receiving Warehouse 1', top: 100, left: 650, icon: mall },
