@@ -34,4 +34,10 @@
   .moving-dot {
     filter: drop-shadow(0 0 8px #BDFE02);
   }
-  
+  .node-label {
+    margin-top: 90px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+  }

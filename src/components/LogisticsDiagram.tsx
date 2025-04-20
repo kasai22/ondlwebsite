@@ -8,9 +8,9 @@ import warehouse from '../assets/icons/warehouse.svg';
 const LogisticsDiagram: React.FC = () => {
   const nodes = [
     { id: 'customer', label: 'Customer', top: 300, left: 0, icon: factory },
-    { id: 'dc1', label: 'Distribution Center 1', top: 100, left: 200, icon: mall },
+    { id: 'dc1', label: 'Distribution Center 1', top: 100, left: 210, icon: mall },
     { id: 'dc2', label: 'Distribution Center 2', top: 500, left: 200, icon: mall },
-    { id: 'warehouse', label: 'Warehouse', top: 300, left: 450, icon: mall },
+    { id: 'warehouse', label: 'Warehouse', top: 300, left: 480, icon: mall },
     { id: 'receiving1', label: 'Receiving Warehouse 1', top: 100, left: 650, icon: mall },
     { id: 'receiving2', label: 'Receiving Warehouse 2', top: 500, left: 650, icon: store },
     { id: 'dc3', label: 'Distribution Center 1', top: 100, left: 900, icon: store },
@@ -21,7 +21,7 @@ const LogisticsDiagram: React.FC = () => {
   const paths = [
     { id: 'path1', d: 'M60,340 C140,340 140,140 240,140' },
     { id: 'path2', d: 'M60,340 C140,340 140,540 240,540' },
-    { id: 'path3', d: 'M290,140 C340,140 360,360 500,340' },
+    { id: 'path3', d: 'M290,140 C340,140 400,360 500,340' },
     { id: 'path4', d: 'M290,540 C340,540 360,360 500,340' },
     { id: 'path5', d: 'M540,340 C580,280 600,140 690,140' },
     { id: 'path6', d: 'M540,340 C580,360 600,540 690,540' },
@@ -35,14 +35,15 @@ const LogisticsDiagram: React.FC = () => {
     <div className="diagram-container">
       {/* Render nodes */}
       {nodes.map((node) => (
-        <div
-          key={node.id}
-          className="node"
-          style={{ top: node.top, left: node.left }}
-        >
-          <img src={node.icon} alt={node.label} className="node-icon" />
+        <div key={node.id} style={{ position: 'absolute', top: node.top, left: node.left, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className="node">
+            <img src={node.icon} alt={node.label} className="node-icon" />
+          </div>
+          <div className="node-label">{node.label}</div>
         </div>
+
       ))}
+      
 
       {/* SVG Lines + Animated Dots */}
       <svg width="100%" height="100%" className="lines">
